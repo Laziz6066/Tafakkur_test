@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from catalog.models import Category, Product
 
 

@@ -1,8 +1,8 @@
 from django.test import TestCase
+
 from catalog.models import Category, Product
-from catalog.serializers import (CategorySerializer,
-                                 ProductSerializer, SearchQuerySerializer,
-                                 SuggestQuerySerializer)
+from catalog.serializers import (CategorySerializer, ProductSerializer,
+                                 SearchQuerySerializer, SuggestQuerySerializer)
 
 
 class CategorySerializerTest(TestCase):

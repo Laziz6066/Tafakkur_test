@@ -1,15 +1,13 @@
-from django.urls import path, include, re_path
-from rest_framework.routers import DefaultRouter
-from .views import (CategoryViewSet, ProductViewSet,
-                    ProductSearchView, ProductSuggestView)
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
-from rest_framework import permissions
-from drf_yasg.views import get_schema_view
+from django.urls import include, path, re_path
 from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions
+from rest_framework.routers import DefaultRouter
+from rest_framework_simplejwt.views import (TokenObtainPairView,
+                                            TokenRefreshView)
 
+from .views import (CategoryViewSet, ProductSearchView, ProductSuggestView,
+                    ProductViewSet)
 
 router = DefaultRouter()
 router.register(r"categories", CategoryViewSet, basename="category")

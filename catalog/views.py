@@ -1,17 +1,18 @@
-from rest_framework import viewsets, permissions, status
-from rest_framework.views import APIView
-from rest_framework.response import Response
+import sys
+
 from django.conf import settings
+from rest_framework import permissions, status, viewsets
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from .models import Category, Product
 from .serializers import (CategorySerializer, ProductSerializer,
                           SearchQuerySerializer, SuggestQuerySerializer)
 
-import sys
-
 # Импорты Elasticsearch только если не в тестовом режиме
 if 'test' not in sys.argv:
     from elasticsearch_dsl import Q
+
     from .documents import ProductDocument
 
 

@@ -1,6 +1,7 @@
-from rest_framework import serializers
-from .models import Category, Product
 from django.conf import settings
+from rest_framework import serializers
+
+from .models import Category, Product
 
 
 class CategorySerializer(serializers.ModelSerializer):

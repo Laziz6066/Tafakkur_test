@@ -1,8 +1,9 @@
 import os
 import time
+from urllib.parse import urlparse
+
 import psycopg2
 from django.core.management.base import BaseCommand
-from urllib.parse import urlparse
 
 
 class Command(BaseCommand):
